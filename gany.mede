@@ -4,14 +4,17 @@ license: "GPL-3.0"
 pubDate: 2020-08-16
 dependencies: []
 install: |
-  echo "To build gany, you need libkrb5-dev and .NET Core 3.1."
-  echo $PWD
+  echo "To install gany, you need 'libkrb5-dev' & '.NET Core 3.1' to build, and 'git' to download the source repository."
+  echo "Obtaining source code … "
   git clone https://github.com/MadeByEmil/gany.git
-  ls
   cd gany
+  echo "Compiling, please be patient."
   dotnet publish -r linux-x64 -c Release
   chmod +x ./bin/Release/netcoreapp3.1/linux-x64/publish/gany
+  echo "Stripping compiled binary … "
   strip --strip-all ./bin/Release/netcoreapp3.1/linux-x64/publish/gany
+  echo "Installation finishing … "
   cp ./bin/Release/netcoreapp3.1/linux-x64/publish/gany /usr/bin
 remove: |
+  echo "Removing … "
   rm /usr/bin/gany
