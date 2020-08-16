@@ -1,0 +1,13 @@
+name: "bin-gany"
+description: "A minimal package manager."
+license: "GPL-3.0"
+pubDate: 2020-08-16
+dependencies: []
+install: |
+  echo "To install gany, you need 'wget' to obtain the binary."
+  wget -O bin-gany https://raw.githubusercontent.com/limeschool/packages/master/bin/gany
+  chmod +x ./bin-gany
+  cp ./bin-gany /usr/bin
+remove: |
+  echo "Removing … "
+  rm /usr/bin/bin-gany
