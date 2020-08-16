@@ -6,8 +6,8 @@ dependencies: []
 install: |
   echo "To build gany, you need libkrb5-dev and .NET Core 3.1."
   echo $PWD
-  ls
   git clone https://github.com/MadeByEmil/gany.git
+  ls
   cd gany-master
   dotnet publish -r linux-x64 -c Release
   chmod +x ./bin/Release/netcoreapp3.1/linux-x64/publish/gany
