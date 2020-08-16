@@ -1,6 +1,7 @@
 name: "gany"
 description: "A simple package manager."
 license: "GPL-3.0"
+pubDate: 2020-08-15
 dependencies: []
 install: |
   git clone https://github.com/MadeByEmil/gany.git
