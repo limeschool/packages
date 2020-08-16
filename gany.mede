@@ -4,6 +4,7 @@ license: "GPL-3.0"
 pubDate: 2020-08-16
 dependencies: []
 install: |
+  echo "To build gany, you need libkrb5-dev and .NET Core 3.1."
   echo $PWD
   ls
   git clone https://github.com/MadeByEmil/gany.git
