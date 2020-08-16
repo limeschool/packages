@@ -4,6 +4,7 @@ license: "GPL-3.0"
 pubDate: 2020-08-15
 dependencies: []
 install: |
+  ls
   git clone https://github.com/MadeByEmil/gany.git
   cd gany-master
   dotnet build --configuration Release --runtime linux-x64
