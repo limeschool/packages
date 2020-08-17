@@ -13,7 +13,9 @@ install: |
   git clone https://github.com/beakerbrowser/beaker.git
   chmod -R 777 ~/gany-tmp/
   cd beaker/scripts
+  chmod -R 777 ./node_modules
   npm install # don't worry about v8 api errors building native modules - rebuild will fix
+  chmod -R 777 ./node_modules
   npm run rebuild # needed after each install. see https://github.com/electron/electron/issues/5851
   npm run release
   cd ../dist
