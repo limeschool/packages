@@ -9,6 +9,7 @@ install: |
   echo "sudo dnf install libtool m4 make gcc-c++ libXScrnSaver  # fedora"
   mkdir /home/gany-tmp/
   chmod -R 777 /home/gany-tmp/
+  cd /home/gany-tmp/
   git clone https://github.com/beakerbrowser/beaker.git
   cd beaker/scripts
   npm install # don't worry about v8 api errors building native modules - rebuild will fix
