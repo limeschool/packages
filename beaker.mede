@@ -1,0 +1,20 @@
+name: "beaker"
+description: "A peer-to-peer browser for Web hackers."
+license: "MIT"
+pubDate: 2020-07-15
+dependencies: []
+install: |
+  echo "Build-only dependencies (besides NPM 12+):"
+  echo "sudo apt-get install libtool m4 make g++ autoconf # debian/ubuntu"
+  echo "sudo dnf install libtool m4 make gcc-c++ libXScrnSaver  # fedora"
+  git clone https://github.com/beakerbrowser/beaker.git
+  cd beaker/scripts
+  npm install # don't worry about v8 api errors building native modules - rebuild will fix
+  npm run rebuild # needed after each install. see https://github.com/electron/electron/issues/5851
+  npm run release
+  cd ../dist
+  mv Beaker*.AppImage /usr/bin/beaker
+  chmod +x /usr/bin/beaker
+remove: |
+  echo "Removing … "
+  rm /usr/bin/beaker
