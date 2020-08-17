@@ -7,6 +7,7 @@ install: |
   echo "Build-only dependencies (besides NPM 12+):"
   echo "sudo apt-get install libtool m4 make g++ autoconf # debian/ubuntu"
   echo "sudo dnf install libtool m4 make gcc-c++ libXScrnSaver  # fedora"
+  mkdir /home/gany-tmp/
   cd /home/gany-tmp/
   git clone https://github.com/beakerbrowser/beaker.git
   cd beaker/scripts
