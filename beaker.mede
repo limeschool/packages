@@ -9,12 +9,12 @@ install: |
   echo "sudo dnf install libtool m4 make gcc-c++ libXScrnSaver  # fedora"
   git clone https://github.com/beakerbrowser/beaker.git
   cd beaker/scripts
-  npm install # don't worry about v8 api errors building native modules - rebuild will fix
+  sudo npm install # don't worry about v8 api errors building native modules - rebuild will fix
   npm run rebuild # needed after each install. see https://github.com/electron/electron/issues/5851
   npm run release
   cd ../dist
-  mv Beaker*.AppImage /usr/bin/beaker
-  chmod +x /usr/bin/beaker
+  sudo mv Beaker*.AppImage /usr/bin/beaker
+  sudo chmod +x /usr/bin/beaker
 remove: |
   echo "Removing … "
   rm /usr/bin/beaker
