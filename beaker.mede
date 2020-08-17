@@ -7,17 +7,18 @@ install: |
   echo "Build-only dependencies (besides NPM 12+):"
   echo "sudo apt-get install libtool m4 make g++ autoconf # debian/ubuntu"
   echo "sudo dnf install libtool m4 make gcc-c++ libXScrnSaver  # fedora"
-  mkdir /home/gany-tmp/
-  cd /home/gany-tmp/
+  cd ~
+  mkdir gany-tmp/
+  cd ~/gany-tmp/
   git clone https://github.com/beakerbrowser/beaker.git
-  chmod -R 777 /home/gany-tmp/
+  chmod -R 777 ~/gany-tmp/
   cd beaker/scripts
   npm install # don't worry about v8 api errors building native modules - rebuild will fix
   npm run rebuild # needed after each install. see https://github.com/electron/electron/issues/5851
   npm run release
   cd ../dist
   sudo mv Beaker*.AppImage /usr/bin/beaker
-  rm -rf /home/gany-tmp
+  rm -rf ~/gany-tmp
   sudo chmod +x /usr/bin/beaker
 remove: |
   echo "Removing … "
