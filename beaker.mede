@@ -10,8 +10,8 @@ install: |
   git clone https://github.com/beakerbrowser/beaker.git
   cd beaker/scripts
   sudo npm install # don't worry about v8 api errors building native modules - rebuild will fix
-  npm run rebuild # needed after each install. see https://github.com/electron/electron/issues/5851
-  npm run release
+  sudo npm run rebuild # needed after each install. see https://github.com/electron/electron/issues/5851
+  sudo npm run release
   cd ../dist
   sudo mv Beaker*.AppImage /usr/bin/beaker
   sudo chmod +x /usr/bin/beaker
