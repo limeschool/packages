@@ -15,7 +15,7 @@ install: |
   cd ../dist
   mv Beaker*.AppImage beaker
   chmod +x beaker
-  sudo mv beaker /usr/bin
+  mv beaker /usr/local/bin
 remove: |
   echo "Removing … "
-  sudo rm /usr/bin/beaker
+  rm /usr/local/bin/beaker
