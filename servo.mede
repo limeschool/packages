@@ -6,6 +6,7 @@ dependencies: []
 install: |
   git clone https://github.com/servo/servo.git
   cd servo
+  ./mach bootstrap-gstreamer
   ./mach build -r
   chmod +x ./target/release/servo
   cp ./target/release/servo /usr/local/bin
