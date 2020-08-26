@@ -1,0 +1,13 @@
+name: "servo"
+description: "The Servo Browser Engine"
+license: "MPL-2.0"
+pubDate: 2020-08-26
+dependencies: []
+install: |
+  git clone https://github.com/servo/servo.git
+  cd servo
+  ./mach build -r
+  chmod +x ./target/release/servo
+  cp ./target/release/servo /usr/local/bin
+remove: |
+  rm /usr/local/bin/servo
